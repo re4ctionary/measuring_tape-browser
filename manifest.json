@@ -24,7 +24,9 @@
   },
   "permissions": [
     "cookies",
-    "tabs"
+    "tabs",
+    "activeTab",
+    "https://ajax.googleapis.com/"
   ],
   "content_scripts": [
     {
@@ -38,6 +40,14 @@
     {
       "matches": [
         "https://www.google.com/*"
+      ],
+      "js": [
+        "src/inject/inject.js"
+      ]
+    },
+    {
+      "matches": [
+        "http://*.com/*"
       ],
       "js": [
         "src/inject/inject.js"
