@@ -1,7 +1,3 @@
-// Copyright (c) 2014 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
 /**
  * Get all Tab URLs.
  *
@@ -28,7 +24,6 @@ function renderStatus(statusText) {
 
 document.addEventListener('DOMContentLoaded', function() {
     getTabUrls(function(urls) {
-        // Put the image URL in Google search.
         renderStatus('Current Tabs: ' + urls.join('\n'));
     });
 });
